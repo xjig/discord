@@ -6,7 +6,7 @@ const filePath = path.join(__dirname, 'economy.json');
 
 const readData = () => {
     if (!fs.existsSync(filePath)) {
-        fs.writeFileSync(filePath, JSON.stringify({}));
+        fs.writeFileSync(filePath, JSON.stringify({})); 
     }
     return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 };
