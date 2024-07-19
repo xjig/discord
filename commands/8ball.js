@@ -6,7 +6,7 @@ module.exports = {
             'Yes.',
             'No.',
             'Maybe.',
-            'Definitely.',
+            'Definitely.',  
             'I don\'t know.',
             'Ask again later.',
             'Absolutely not.',
