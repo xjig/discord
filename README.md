@@ -9,5 +9,5 @@ The only thing you have to change is the Discord token in index.js After that yo
 Feel free to add changes.
  
  https://guns.lol/dll
- 
+  
  
