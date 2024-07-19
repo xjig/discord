@@ -1,7 +1,7 @@
 const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
-    name: 'help',
+    name: 'help',   
     description: 'List all available commands with pagination',
     async execute(message, args) {
         const commands = message.client.commands;
