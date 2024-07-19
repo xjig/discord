@@ -5,7 +5,7 @@ const path = require('path');
 
 const TOKEN = 'your discord bot token here';
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] }); 
 
  
 client.commands = new Map();
