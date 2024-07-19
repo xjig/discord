@@ -10,7 +10,7 @@ module.exports = {
             .setColor('#0099ff')
             .setTitle('Dice Roll')
             .setDescription(`You rolled a ${roll}!`);
-
+   
         message.reply({ embeds: [rollEmbed] });
     },
 };
