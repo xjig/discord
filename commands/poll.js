@@ -5,7 +5,7 @@ module.exports = {
     description: 'Create a poll',
     execute(message, args) {
         const question = args.slice(0).join(' ');
-        if (!question) {
+        if (!question) {  
             return message.reply('Please provide a question for the poll.');
         }
 
