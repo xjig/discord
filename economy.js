@@ -3,7 +3,7 @@ const path = require('path');
 
 const filePath = path.join(__dirname, 'economy.json');
 
-// Read JSON data from file
+
 const readData = () => {
     if (!fs.existsSync(filePath)) {
         fs.writeFileSync(filePath, JSON.stringify({}));
@@ -11,19 +11,19 @@ const readData = () => {
     return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 };
 
-// Write JSON data to file
+
 const writeData = (data) => {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
 };
 
-// Get balance
+
 const getBalance = (userId, callback) => {
     const data = readData();
     const balance = data[userId] || 0;
     callback(null, balance);
 };
 
-// Set balance
+
 const setBalance = (userId, amount, callback) => {
     const data = readData();
     data[userId] = amount;
@@ -31,7 +31,7 @@ const setBalance = (userId, amount, callback) => {
     callback(null);
 };
 
-// Add balance
+
 const addBalance = (userId, amount, callback) => {
     getBalance(userId, (err, balance) => {
         if (err) {
@@ -42,7 +42,7 @@ const addBalance = (userId, amount, callback) => {
     });
 };
 
-// Transfer balance
+
 const transferBalance = (fromId, toId, amount, callback) => {
     getBalance(fromId, (err, fromBalance) => {
         if (err) {
@@ -61,7 +61,7 @@ const transferBalance = (fromId, toId, amount, callback) => {
     });
 };
 
-// Gamble
+
 const gamble = (userId, amount, callback) => {
     getBalance(userId, (err, balance) => {
         if (err) {
@@ -69,8 +69,8 @@ const gamble = (userId, amount, callback) => {
         } else if (balance < amount) {
             callback(new Error('Insufficient funds'));
         } else {
-            const win = Math.random() < 0.5; // 50% chance to win
-            const winAmount = amount * 2; // Win twice the amount
+            const win = Math.random() < 0.5; 
+            const winAmount = amount * 2;
             if (win) {
                 addBalance(userId, winAmount, (err) => {
                     if (err) {
